@@ -70,21 +70,21 @@
                         </div>
                     </div>
 
-                    <div class="form-group">
+                    <!-- <div class="form-group">
                         <label class="control-label col-md-2">Password Anggota
                           <span class="required">*</span>
                         </label>
                         <div class="col-md-9">
                         <input type="password" class="form-control" required="required" name="password" placeholder="Password Anggota" class="form-control col-md-9 col-xs-12">
                         </div>
-                    </div>
+                    </div> -->
 
                     <div class="form-group">
                         <label class="control-label col-md-2">Nomor Identitas
                           <span class="required">*</span>
                         </label>
                         <div class="col-md-9">
-                        <input type="text" class="form-control" name="identitas" placeholder="Nomor Identitas" required="required">
+                        <input type="text" class="form-control" name="identitas" placeholder="Nomor Identitas Anggota" required="required">
                         </div>
                     </div>
 
@@ -95,10 +95,9 @@
                   </label>
                   <div class="col-md-9">
                       <select class="tags form-control program-multi" tabindex="-1"  name="jabatan" required="required">
-                          <option value="0">Staff</option>
+                          <option value="0">Peneliti</option>
                           <option value="1">Admin</option>
-                          <option value="2">Peneliti</option>
-                          <option value="3">Direktur</option>
+                          <option value="2">Kepala Pusat</option>
                        </select>
                     </div>
                     </div>
@@ -108,6 +107,8 @@
                         <button type="submit" class="btn btn-success">Submit</button>
                         </div>
                     </div>
+                    <?php $random = str_random(10);
+                    session()->put('password', $random);?>
 
 
                     </form>

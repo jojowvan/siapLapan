@@ -20,6 +20,14 @@ class UserController extends Controller
         return view('lihatAnggota', compact('user'));
     }
 
+    public function destroy($id)
+    {
+        $user   = User::find($id);
+        $user->delete();
+        session()->flash('deleteNotif', 'Delete Succesful!');
+        return redirect()->route('lihatStaff.readAll');
+    }
+
     public function edit($id)
     {
         $user   = User::find($id);

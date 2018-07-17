@@ -27,10 +27,11 @@
           <thead>
             <tr>
               <th style="width: 1%" >Number</th>
-              <th>Nama Anggota</th>
-              <th>Jabatan Anggota</th>
+              <th> Nama Anggota</th>
+              <th>Email</th>
               <th>Nomor Identitas</th>
-              <th style="width: 20%">Actions</th>
+              <th>Jabatan Anggota</th>
+              <th style="width: 1%">Actions</th>
             </tr>
           </thead>
           <tbody>
@@ -40,6 +41,8 @@
             <tr>
               <td>{{ $no }}</td>
               <td>{{ $read->name }}</td>
+              <td>{{ $read->email }}</td>
+              <td>{{ $read->identitas }}</td>
               <?php
               if($read->isAdmin == 0) {
                 $jabatan = 'Staff';
@@ -55,17 +58,14 @@
               }
               ?>
               <td>{{ $jabatan }}</td>
-              <td>{{ $read->identitas }}</td>
               <td>
                 <?php
                 if($read->id != Auth::id()) {
                 ?>
 
-                  <form action="#" method="post">
+                  <form action="{{ route('lihatStaff.destroy', $read->id) }}" method="post">
                       {{ csrf_field() }}
                       {{ method_field('DELETE') }}
-                      <a href="{{ route('anggota.view', $read->id) }}" class="btn btn-primary btn-xs"><i class="fa fa-eye"></i> View </a>
-                      <a href="{{ route('anggota.edit', $read->id) }}" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
                       <button type="submit" class="btn btn-danger btn-xs"  onclick="deleteConfirm()"><i class="fa fa-trash-o"></i>Delete</button>
 
                       <script>
@@ -73,11 +73,11 @@
                             event.preventDefault(); // prevent form submit
                             var form = event.target.form; // storing the form
                               swal({
-                                title: "Are you sure?",
-                                text: "You will not be able to recover this Scholarship!",         type: "warning",
+                                title: "Apakah anda yakin?",
+                                text: "Anda tidak dapat mengembalikan akun yang telah dihapus",         type: "warning",
                                 showCancelButton: true,
                                 confirmButtonColor: "#DD6B55",
-                                confirmButtonText: "Yes, delete it!",
+                                confirmButtonText: "Hapus",
                                 closeOnConfirm: false
                             },
                             function(isConfirm){
