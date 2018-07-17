@@ -27,7 +27,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('admin.dashboard');
-
+Route::get('/home', 'HomeController@index2')->name('Peneliti.dashboard');
 //Route::get('/ea', function(){
   //run cmd
   //$process = new Process('python as.py');
