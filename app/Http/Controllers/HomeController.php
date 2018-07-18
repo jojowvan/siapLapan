@@ -34,6 +34,11 @@ class HomeController extends Controller
           $admins         = User::find($id);
           return view('homeAdmin');
         }
+        elseif (auth()->user()->isAdmin==2) {
+          $id             = Auth::user()->id;
+          $admins         = User::find($id);
+          return view('kapus/home');
+        }
         else {
           return view('home');
         }
