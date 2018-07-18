@@ -56,13 +56,13 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="pages/cabang/chartjs.html"><i class="fa fa-circle-o"></i> Agam</a></li>
-            <li><a href="pages/Cabang/morris.html"><i class="fa fa-circle-o"></i> Biak</a></li>
-            <li><a href="pages/cabang/flot.html"><i class="fa fa-circle-o"></i> Garut</a></li>
-            <li><a href="pages/cabang/inline.html"><i class="fa fa-circle-o"></i> Kupang</a></li>
-            <li><a href="pages/cabang/inline.html"><i class="fa fa-circle-o"></i> Manado</a></li>
-            <li><a href="pages/cabang/inline.html"><i class="fa fa-circle-o"></i> Pontianak</a></li>
-            <li><a href="pages/cabang/inline.html"><i class="fa fa-circle-o"></i> Sumedang</a></li>
+            <li><a href="/agam"><i class="fa fa-circle-o"></i> Agam</a></li>
+            <li><a href="/biak"><i class="fa fa-circle-o"></i> Biak</a></li>
+            <li><a href="/garut"><i class="fa fa-circle-o"></i> Garut</a></li>
+            <li><a href="/kupang"><i class="fa fa-circle-o"></i> Kupang</a></li>
+            <li><a href="/manado"><i class="fa fa-circle-o"></i> Manado</a></li>
+            <li><a href="/pontianak"><i class="fa fa-circle-o"></i> Pontianak</a></li>
+            <li><a href="/sumedang"><i class="fa fa-circle-o"></i> Sumedang</a></li>
           </ul>
         </li>
         {{--  hapus dibawah ini  --}}

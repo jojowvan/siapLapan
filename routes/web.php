@@ -23,7 +23,27 @@ error_reporting(0);
 Route::get('/', function () {
     return view('welcome');
 });
-
+Route::get('/agam', function () {
+    return view('Peneliti/agam');
+});
+Route::get('/biak', function () {
+    return view('Peneliti/biak');
+});
+Route::get('/garut', function () {
+    return view('Peneliti/garut');
+});
+Route::get('/kupang', function () {
+    return view('Peneliti/kupang');
+});
+Route::get('/manado', function () {
+    return view('Peneliti/manado');
+});
+Route::get('/pontianak', function () {
+    return view('Peneliti/pontianak');
+});
+Route::get('/sumedang', function () {
+    return view('Peneliti/sumedang');
+});
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('admin.dashboard');
