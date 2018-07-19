@@ -44,10 +44,18 @@ Route::get('/pontianak', function () {
 Route::get('/sumedang', function () {
     return view('Peneliti/sumedang');
 });
+
+Route::get('/pasuruan', function () {
+    return view('Peneliti/pasuruan');
+});
+
+Route::get('/yogyakarta', function () {
+    return view('Peneliti/yogyakarta');
+});
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('admin.dashboard');
-Route::get('/home', 'HomeController@index2')->name('Peneliti.dashboard');
+Route::get('/home', 'UserController@viewHome')->name('Peneliti.dashboard');
 //Route::get('/ea', function(){
   //run cmd
   //$process = new Process('python as.py');

@@ -38,8 +38,8 @@
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header">MAIN NAVIGATION</li>
-        <li class="treeview">
-          <a href="#">
+        <li class="">
+          <a href="{{ route('Peneliti.dashboard') }}">
             <i class="fa fa-dashboard"></i> <span>Dashboard</span>
           </a>
           <ul class="treeview-menu">
@@ -63,6 +63,8 @@
             <li><a href="/manado"><i class="fa fa-circle-o"></i> Manado</a></li>
             <li><a href="/pontianak"><i class="fa fa-circle-o"></i> Pontianak</a></li>
             <li><a href="/sumedang"><i class="fa fa-circle-o"></i> Sumedang</a></li>
+            <li><a href="/pasuruan"><i class="fa fa-circle-o"></i> Pasuruan</a></li>
+            <li><a href="/yogyakarta"><i class="fa fa-circle-o"></i> Yogyakarta</a></li>
           </ul>
         </li>
         {{--  hapus dibawah ini  --}}

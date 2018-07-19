@@ -20,41 +20,55 @@ class UserController extends Controller
         return view('lihatAnggota', compact('user'));
     }
 
-    public function view()
+    public function viewHome()
+    {
+        return view('Peneliti/home');
+    }
+
+    public function viewAgam()
     {
         return view('Peneliti/agam');
     }
 
-    public function view()
+    public function viewBiak()
     {
         return view('Peneliti/biak');
     }
 
-    public function view()
+    public function viewGarut()
     {
         return view('Peneliti/garut');
     }
 
-    public function view()
+    public function viewKupang()
     {
         return view('Peneliti/kupang');
     }
 
-    public function view()
+    public function viewManado()
     {
         return view('Peneliti/manado');
     }
 
-    public function view()
+    public function viewPontianak()
     {
         return view('Peneliti/pontianak');
     }
 
-    public function view()
+    public function viewSumedang()
     {
         return view('Peneliti/sumedang');
     }
 
+    public function viewPasuruan()
+    {
+        return view('Peneliti/pasuruan');
+    }
+
+    public function viewYogyakarta()
+    {
+        return view('Peneliti/yogyakarta');
+    }
     public function destroy($id)
     {
         $user   = User::find($id);
